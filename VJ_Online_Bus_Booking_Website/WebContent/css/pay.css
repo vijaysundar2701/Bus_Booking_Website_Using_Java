@@ -1,0 +1,43 @@
+@CHARSET "ISO-8859-1";
+@charset "UTF-8";
+html{
+background: url("../images/tr1.jpg") no-repeat center center fixed;
+text-align:center;
+line-height:1.5;
+}
+body{
+text-align:center;
+line-height:1.5;}
+.border
+{
+  border: 2px solid white;
+  padding:15px;
+  border-radius: 10px;
+  background-color:white;
+  color:black;
+  margin-left:24%;
+  margin-right:24%;
+  margin-top:5%;
+}
+#deb{
+	border:2px solid black;
+	text-align:left;
+	padding:5px;
+	background-color:white;
+	color:black;
+}
+#net{
+	border:2px solid black;
+	text-align:left;
+	background-color:white;
+	color:black;
+	padding:0 0 0 42%;
+}
+th
+{
+	word-spacing:2px;	
+}
+img{
+	height:100px;
+	width:100px;
+}

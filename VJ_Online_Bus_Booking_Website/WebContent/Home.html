@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Home Page</title>
+<link rel="stylesheet" type="text/css" href="css/back.css">
+<script>
+function myFunction(){
+var today = new Date().toISOString().split('T')[0];
+document.getElementsByName("txtDate")[0].setAttribute('min', today);
+}
+</script>
+<script type="text/javascript">
+  function checkForm()
+  {
+	var cities=["Ariyalur","Chennai","Coimbatore","Cuddaloor","Dharmapuri","Dindgul","Erode","Kancipuram","Kanniya kumari","Karur","Krishnagiri","Madurai","Namakkal","Nagapattinam","Permbalur","Puthukootai","Ramanathapuram","Salem","Sivagankai","Trichy","Theni","Thiruvanamalai","Tripur","Thirunelvei","Thiruvarur","Thiruvallur","Thoothukudi","Vellore","Villipuram","Virudhunagar"];
+    var f=document.getElementById("From").value;
+    var t=document.getElementById("To").value;
+	if(cities.includes(f)&&cities.includes(t)&&f!=t)
+    	{
+    		alert("Welcome");
+    	}
+    else if(cities.includes(f)&&cities.includes(t)&&f==t)
+    {
+    	alert("Source and Destination city cannot be same");
+    }
+    else
+    {
+    		alert("Invalid place ! Please select the place from below list");
+    }
+  }
+</script>
+</head>
+<style>
+img{
+height:8%;
+width:8%;
+}
+input[type=button]{
+  background-color: white;
+  border:thin solid black;
+  color: black;
+  padding: 5px 5px;
+  text-decoration: none;
+  margin: 10px 5%;
+  cursor: pointer;
+}
+input[type=submit]{
+  background-color: white;
+  border:thin solid black;
+  color: black;
+  padding: 5px 5px;
+  text-decoration: none;
+  margin: 15px 10px;
+  cursor: pointer;
+}
+</style>
+<body>
+<img src="images/vjlogo.jpg"><br>
+<h1>Welcome to VJ travels</h1>
+<form autocomplete="off" action="ViewServlet">
+<div><h2>From:</h2><input list="cities" name="From" id="From" placeholder="Enter Your Source" required>
+<datalist id="cities">
+<option value="Ariyalur">
+<option value="Chennai">
+<option value="Coimbatore">
+<option value="Cuddaloor">
+<option value="Dharmapuri">
+<option value="Dindgul">
+<option value="Erode">
+<option value="Kancipuram">
+<option value="Kanniya kumari">
+<option value="Karur">
+<option value="Krishnagiri">
+<option value="Madurai">
+<option value="Namakkal">
+<option value="Nagapattinam">
+<option value="Permbalur">
+<option value="Puthukootai">
+<option value="Ramanathapuram">
+<option value="Salem">
+<option value="Sivagankai">
+<option value="Trichy">
+<option value="Theni">
+<option value="Thiruvanamalai">
+<option value="Tripur">
+<option value="Thirunelvei">
+<option value="Thiruvarur">
+<option value="Thiruvallur">
+<option value="Thoothukudi">
+<option value="Vellore">
+<option value="Villipuram">
+<option value="Virudhunagar">
+</datalist><br></div>
+<div><h2>To:</h2><input list="cities" name="To" id="To" placeholder="Enter Your Destination" required>
+<datalist id="cities">
+<option value="Ariyalur">
+<option value="Chennai">
+<option value="Coimbatore">
+<option value="Cuddaloor">
+<option value="Dharmapuri">
+<option value="Dindgul">
+<option value="Erode">
+<option value="Kancipuram">
+<option value="Kanniya kumari">
+<option value="Karur">
+<option value="Krishnagiri">
+<option value="Madurai">
+<option value="Namakkal">
+<option value="Nagapattinam">
+<option value="Permbalur">
+<option value="Puthukootai">
+<option value="Ramanathapuram">
+<option value="Salem">
+<option value="Sivagankai">
+<option value="Trichy">
+<option value="Theni">
+<option value="Thiruvanamalai">
+<option value="Tripur">
+<option value="Thirunelvei">
+<option value="Thiruvarur">
+<option value="Thiruvallur">
+<option value="Thoothukudi">
+<option value="Vellore">
+<option value="Villipuram">
+<option value="Virudhunagar">
+</datalist><br></div>
+<div><h2>Journey Date:</h2><input type="date" id="txtDate" onclick="myFunction()" min="2020-04-01" name="txtDate" required/><br></div>
+<div><h3>
+<input type="button" onclick="location.href='http://localhost:8080/VJ_TRAVELS/Main.html';" value="Back" />
+<input type="submit" onclick="checkForm()" class="search" id="search" value="Search">
+</h3>
+</div>
+</form>
+</body>
+</html>
