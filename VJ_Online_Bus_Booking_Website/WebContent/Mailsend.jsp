@@ -38,15 +38,15 @@ String host="", user="", pass="";
 
 host ="smtp.gmail.com"; //"smtp.gmail.com";
 
-user ="vijaysundars99@gmail.com"; //"YourEmailId@gmail.com" // email id to send the emails
+user ="************"; //"YourEmailId@gmail.com" // email id to send the emails
 
-pass ="vjmotivator@27"; //Your gmail password
+pass ="************"; //Your gmail password
 
 String SSL_FACTORY = "javax.net.ssl.SSLSocketFactory";
 
 String to =Email;// out going email id
 
-String from ="vijaysundars99@gmail.com"; //Email id of the recipient
+String from ="**************"; //Email id of the recipient
 //String subject ="welcome";
 String subject1="Welcome to VJ travels ! Get Your Ticket";
 String msg1="!......Happy Journey......!\n";
